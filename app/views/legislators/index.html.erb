@@ -1,7 +1,9 @@
 <h1><%= @legislators.count %> results</h1>
 
 <% @legislators.each do |legislator| %>
+<div id=<%= legislator.slug %>>
 <p><%= legislator.first_name %> <%= legislator.last_name %> (<%= legislator.full_party %>)
 <%= link_to "Website", legislator.website %>
 <%= link_to "Committees", legislator_committees_path(legislator_slug: legislator.slug) %> </p>
+</div>
 <% end %>
