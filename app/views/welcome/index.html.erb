@@ -1,0 +1,8 @@
+<div class="container">
+
+<%= form_tag("/search", method: "get") do %>
+<%= label_tag(:zip, "Search by Zip") %>
+<%= text_field_tag(:zip) %>
+<%= submit_tag("Search") %>
+<% end %>
+</div>

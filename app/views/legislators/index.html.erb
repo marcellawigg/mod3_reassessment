@@ -1,0 +1,6 @@
+<h1><%= @legislators.count %> results</h1>
+
+<% @legislators.each do |legislator| %>
+<p><%= legislator.first_name %> <%= legislator.last_name %> (<%= legislator.full_party %>)
+<%= link_to "Website", legislator.website %></p>
+<% end %>
