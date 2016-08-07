@@ -3,6 +3,9 @@
 <p>
 Name: <%= com.name %>
 <br>Chamber: <%= com.chamber %>
-<br>Subcommittee: <%= com.subcommittee %>
+
+<% if com.subcommittee == true %>
+<br>Parent Committee: <%= Committee.parent_committee(com.parent_committee_id) %>
+<% end %>
 <% end %>
 </p>

@@ -28,4 +28,24 @@ class SunlightServiceTest < ActiveSupport::TestCase
       assert_equal true, committee[:subcommittee]
     end
   end
+
+  test "#parent_committee" do
+    VCR.use_cassette("#parent_committee") do
+      id = "SSGA"
+      parent_committee = service.parent_committee(id)
+      assert_equal "Senate Committee on Homeland Security and Governmental Affairs", parent_committee.first[:name]
+      assert_equal "senate", parent_committee.first[:chamber]
+    end
+  end
+
+    test "#find_by_name" do
+      VCR.use_cassette("#find_by_name") do
+        first_name = "Elizabeth"
+        last_name = "Warren"
+        warren = service.find_by_name(first_name, last_name)
+        assert_equal "F", warren[:gender]
+        assert_equal "D", warren[:party]
+        assert_equal "202-224-4543", warren[:phone]
+    end
+  end
 end

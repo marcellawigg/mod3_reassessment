@@ -12,4 +12,12 @@ class CommitteeTest < ActiveSupport::TestCase
       assert_equal true, committee.subcommittee
     end
   end
+
+  test "#parent_committee" do
+    VCR.use_cassette("#parent_committee") do
+      committee_id = "SSGA"
+      parent_committee = Committee.parent_committee(committee_id)
+      assert_equal "Senate Committee on Homeland Security and Governmental Affairs", parent_committee
+    end
+  end
 end
