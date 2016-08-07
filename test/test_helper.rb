@@ -8,6 +8,7 @@ require "vcr"
 require "rack/test"
 require 'byebug'
 require 'capybara/rails'
+require 'faraday'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
