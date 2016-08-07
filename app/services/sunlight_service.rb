@@ -8,6 +8,5 @@ class SunlightService
   def find_by_zip(zip)
     response = connection.get("/legislators/locate?zip=#{zip}")
     JSON.parse(response.body, symbolize_names: true)[:results]
-
-    end
+  end
 end
