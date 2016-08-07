@@ -14,4 +14,16 @@ class Legislator
     @party = legislator[:party]
     @website = legislator[:website]
   end
+
+  def full_party
+    if party == "R"
+      "Republican"
+    elsif party == "D"
+      "Democrat"
+    elsif party == "I"
+      "Independent"
+    else
+      "Other"
+    end
+  end
 end

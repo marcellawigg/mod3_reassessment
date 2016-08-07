@@ -13,4 +13,12 @@ class LegislatorTest < ActiveSupport::TestCase
     end
   end
 
+  test "#full_party_name" do
+      legislator = Legislator.find_by_zip('80203').first
+      assert_equal "R", legislator.party
+      assert_equal "Republican", legislator.full_party
+      second_legislator = Legislator.find_by_zip('80203').last
+      assert_equal "D", second_legislator.party
+      assert_equal "Democrat", second_legislator.full_party
+  end
 end
