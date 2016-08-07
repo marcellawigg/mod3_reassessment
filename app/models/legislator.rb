@@ -1,5 +1,5 @@
 class Legislator
-  attr_reader :service, :first_name, :last_name, :party, :website, :id
+  attr_reader :service, :first_name, :last_name, :party, :website, :bioguide_id
   def self.service
     @service = SunlightService.new
   end
@@ -13,7 +13,7 @@ class Legislator
     @last_name = legislator[:last_name]
     @party = legislator[:party]
     @website = legislator[:website]
-    @id = legislator[:bioguide_id]
+    @bioguide_id = legislator[:bioguide_id]
   end
 
   def full_party
@@ -26,5 +26,9 @@ class Legislator
     else
       "Other"
     end
+  end
+
+  def make_slug
+    self.slug = (first_name + " " + last_name).downcase.gsub(/[^a-z1-9]+/, '-').chomp('-')
   end
 end

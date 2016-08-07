@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Sun, 07 Aug 2016 03:17:50 GMT
+      - Sun, 07 Aug 2016 03:56:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -52,5 +52,5 @@ http_interactions:
         Protection, Product Safety, Insurance, and Data Security","parent_committee_id":"SSCM","subcommittee":true},{"chamber":"senate","committee_id":"SSCM01","name":"Aviation
         Operations, Safety, and Security","parent_committee_id":"SSCM","subcommittee":true}],"count":15,"page":{"count":15,"per_page":20,"page":1}}'
     http_version: 
-  recorded_at: Sun, 07 Aug 2016 03:17:50 GMT
+  recorded_at: Sun, 07 Aug 2016 03:56:43 GMT
 recorded_with: VCR 3.0.3

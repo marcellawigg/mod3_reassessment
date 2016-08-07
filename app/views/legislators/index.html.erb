@@ -2,5 +2,5 @@
 
 <% @legislators.each do |legislator| %>
 <p><%= legislator.first_name %> <%= legislator.last_name %> (<%= legislator.full_party %>)
-<%= link_to "Website", legislator.website %></p>
+<%= link_to "Website", legislator.website %> <%= link_to "Committees", committees_show_path %> </p>
 <% end %>
