@@ -1,5 +1,5 @@
 class Legislator
-  attr_reader :service, :first_name, :last_name, :party, :website
+  attr_reader :service, :first_name, :last_name, :party, :website, :id
   def self.service
     @service = SunlightService.new
   end
@@ -13,6 +13,7 @@ class Legislator
     @last_name = legislator[:last_name]
     @party = legislator[:party]
     @website = legislator[:website]
+    @id = legislator[:bioguide_id]
   end
 
   def full_party

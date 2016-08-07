@@ -13,5 +13,4 @@ class SearchForCongresspeopleByLocationTest < Capybara::Rails::TestCase
     assert page.has_content?('Diana DeGette (Democrat)')
     assert page.has_content?('Michael Bennet (Democrat)')
   end
-
 end
