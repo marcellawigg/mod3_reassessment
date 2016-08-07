@@ -30,8 +30,6 @@ class Legislator
     new(service.find_by_name(first_name, last_name).first)
   end
 
-
-
   def full_party
     if party == "R"
       "Republican"

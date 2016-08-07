@@ -1,4 +1,5 @@
 class Committee
+
   attr_reader :name, :chamber, :subcommittee, :parent_committee_id
   def self.service
     @service = SunlightService.new
