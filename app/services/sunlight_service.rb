@@ -14,4 +14,9 @@ class SunlightService
     response = connection.get("/committees?member_ids=#{bioguide_id}")
     JSON.parse(response.body, symbolize_names: true)[:results]
   end
+
+  def find_by_name(first_name, last_name)
+    response = connection.get("/legislators?first_name=#{first_name}&last_name=#{last_name}")
+  JSON.parse(response.body, symbolize_names: true)[:results]
+  end
 end

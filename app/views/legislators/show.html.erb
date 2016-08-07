@@ -1,0 +1,8 @@
+<h1><%= @legislator.full_name %>'s Committees </h1>
+<% @committees.each do |com| %>
+<p>
+Name: <%= com.name %>
+<br>Chamber: <%= com.chamber %>
+<br>Subcommittee: <%= com.subcommittee %>
+<% end %>
+</p>
