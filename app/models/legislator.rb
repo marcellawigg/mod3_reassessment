@@ -28,7 +28,11 @@ class Legislator
     end
   end
 
-  def make_slug
-    self.slug = (first_name + " " + last_name).downcase.gsub(/[^a-z1-9]+/, '-').chomp('-')
+  def full_name
+    first_name + " " + last_name
+  end
+
+  def slug
+    full_name.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-')
   end
 end

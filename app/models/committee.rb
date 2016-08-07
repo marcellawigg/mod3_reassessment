@@ -4,7 +4,6 @@ class Committee
     @service = SunlightService.new
   end
 
-
   def self.find_committees(bioguide_id)
       service.find_committees(bioguide_id).map { |committee| Committee.new(committee) }
   end
